@@ -12,6 +12,7 @@ body {
   width: 1320px;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
 }
 
 .d-flex {
@@ -53,6 +54,58 @@ header {
   gap: 20px;
 }
 
+.account-btn {
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.account-btn-img {
+  fill: #333333;
+}
+
+.account-btn-img:hover {
+  fill: #3FCF5E;
+}
+
+.account-dropdown-menu {
+  position: absolute;
+  right: 0;
+  top: 75px;
+  padding: 25px 20px 35px 20px;
+  background-color: #fff;
+  box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.10);
+  border-radius: 15px;
+  display: none;
+  z-index: 1;
+}
+
+.account-dropdown:hover .account-dropdown-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.login, .sign-in {
+  padding: 15px 53px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.login {
+  background-color: #3FCF5E;
+  color: #fff;
+  border: none;
+}
+
+.sign-in {
+  color: #333333;
+  border: 1px solid #BDBDBD;
+
+}
+
 .navigation {
   justify-content: space-between;
 }
@@ -75,7 +128,49 @@ header {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
 
+.dropdown:hover::after {
+  content: '';
+  width: 15px;
+  height: 15px;
+  background-image: url("../assets/images/green-down.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.dropdown-menu {
+  position: relative;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.dropdown-menu .menu {
+  position: absolute;
+  display: none;
+  top: 75px;
+  padding-top: 21px;
+  padding-bottom: 34px;
+  padding-left: 25px;
+  text-align: left;
+  width: 284px;
+  font-size: 18px;
+  font-weight: 500;
+  z-index: 1;
+}
+
+.dropdown-menu:hover .menu {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  background-color: #fff;
+  box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.10);
+  border-radius: 15px ;
+}
+
+.dropdown-menu .menu a:hover {
+  color: #3FCF5E;
 }
 
 .search {
